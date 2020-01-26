@@ -46,7 +46,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func micButtonAction(_ sender: Any) {
-        performSegue(withIdentifier: "segway", sender: nil)
+        do {
+            try AudioKit.stop()
+        } catch {
+            AKLog("AudioKit did not stop in View!")
+        }
+        performSegue(withIdentifier: "nextsegway", sender: nil)
     }
     
     // Action for button to be pressed
