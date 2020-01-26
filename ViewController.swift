@@ -65,7 +65,7 @@ class ViewController: UIViewController {
             oscillator.amplitude = random(0.5,1)
             oscillator.frequency = random(220, 880)
             oscillator.start()
-            (sender as AnyObject).setTitle("Stop Sine Wave at \(Int(oscillator.frequency))Hz", for: .normal)
+            (sender as AnyObject).setTitle("Stop Sine Wave at \(nt(oscillator.frequency))Hz", for: .normal)
         }
     }
 
